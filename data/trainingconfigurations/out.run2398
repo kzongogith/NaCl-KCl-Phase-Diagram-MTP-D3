@@ -1,0 +1,1096 @@
+
+     Program PWSCF v.6.6 starts on  8Sep2024 at  2:14:30 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on     154 processor cores
+     Number of MPI processes:                14
+     Threads/MPI process:                    11
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      14
+     Fft bands division:     nmany     =       1
+     Waiting for input...
+     Reading input from standard input
+Warning: card  &CELL ignored
+Warning: card  / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     file Cl.pbe-n-rrkjus_psl.0.1.UPF: wavefunction(s)  3S renormalized
+     file K.pbe-spn-rrkjus_psl.1.0.0.UPF: wavefunction(s)  3S renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  3*  3 procs)
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        2425    1983    495               349631   258363   32293
+     Max        2426    1984    496               349634   258366   32296
+     Sum       33959   27767   6931              4894851  3617097  452115
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      33.5407  a.u.
+     unit-cell volume          =   49935.1060 (a.u.)^3
+     number of atoms/cell      =          137
+     number of atomic types    =            3
+     number of electrons       =      1209.00
+     number of Kohn-Sham states=          726
+     kinetic-energy cutoff     =      66.0000  Ry
+     charge density cutoff     =     323.0000  Ry
+     convergence threshold     =      1.0E-06
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=  33.540749  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.175165   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.126131 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  0.850944  0.000000 )  
+               b(3) = (  0.000000  0.000000  0.887996 )  
+
+
+     PseudoPot. # 1 for Na read from file:
+     /home/haojia/qe_pseudo/Na.pbe-spnl-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 1d26e2eb43446ab266a33aefbd559171
+     Pseudo is Ultrasoft + core correction, Zval =  9.0
+     Generated using "atomic" code by A. Dal Corso v.6.3
+     Using radial grid of 1121 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Cl read from file:
+     /home/haojia/qe_pseudo/Cl.pbe-n-rrkjus_psl.0.1.UPF
+     MD5 check sum: 0cd16aaa73b7ca1665f055d7cccb58f3
+     Pseudo is Ultrasoft + core correction, Zval =  7.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Using radial grid of 1157 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for K  read from file:
+     /home/haojia/qe_pseudo/K.pbe-spn-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: 897b700350bb708b0563e904352feb48
+     Pseudo is Ultrasoft + core correction, Zval =  9.0
+     Generated using "atomic" code by A. Dal Corso v.6.2.2
+     Using radial grid of 1165 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Na             9.00    22.99000     Na( 1.00)
+        Cl             7.00    35.45300     Cl( 1.00)
+        K              9.00    39.09830     K ( 1.00)
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Cl  tau(   1) = (   0.1294000   0.0032455  -0.1065412  )
+         2           K   tau(   2) = (   0.0742831   0.1234408   0.0473535  )
+         3           K   tau(   3) = (   0.3851011  -0.1890687   0.0191366  )
+         4           K   tau(   4) = (   0.2730672  -0.0292524  -0.0391481  )
+         5           K   tau(   5) = (   0.5915770   0.9505043   0.0549459  )
+         6           Na  tau(   6) = (   0.5189926   0.0085317  -0.0485592  )
+         7           K   tau(   7) = (   0.9124570   0.0036334  -0.0335682  )
+         8           K   tau(   8) = (   0.8865457  -0.1820722   0.0404964  )
+         9           K   tau(   9) = (   0.7875035  -0.2062116   0.9482450  )
+        10           K   tau(  10) = (   0.0973029   0.3125455  -0.0687030  )
+        11           K   tau(  11) = (   0.2803307   0.2356634   0.0621635  )
+        12           K   tau(  12) = (   0.4213026   0.0374154   0.1217201  )
+        13           Cl  tau(  13) = (   0.3341473   0.2827213  -0.1033889  )
+        14           K   tau(  14) = (   0.5312744   0.2202873  -0.0392605  )
+        15           Cl  tau(  15) = (   0.5302299   0.2501166   0.9361541  )
+        16           K   tau(  16) = (   0.7890923   0.1155333   0.1208885  )
+        17           K   tau(  17) = (   0.9144290   0.2248155  -0.1099977  )
+        18           K   tau(  18) = (   0.9139388   0.3024430   0.0836701  )
+        19           K   tau(  19) = (   0.7486788   0.2918632  -0.0411139  )
+        20           K   tau(  20) = (   0.0958843   0.6026931  -0.1726830  )
+        21           K   tau(  21) = (   0.1253716   0.5254504   0.0458829  )
+        22           Na  tau(  22) = (   0.2092445   0.4803904  -0.1267576  )
+        23           K   tau(  23) = (   0.3962533   0.6376247  -0.0764021  )
+        24           K   tau(  24) = (   0.5232317   0.4447856  -0.0857851  )
+        25           Na  tau(  25) = (   0.6749056   0.6089244   0.9458110  )
+        26           K   tau(  26) = (   0.7243732   0.5628948   0.0145868  )
+        27           K   tau(  27) = (   0.9400079   0.4399065  -0.1063891  )
+        28           K   tau(  28) = (   0.1338047   0.7106147   0.0506981  )
+        29           K   tau(  29) = (   0.9299566   0.6777734   0.1014564  )
+        30           K   tau(  30) = (   0.2105319   0.9081976  -0.0424942  )
+        31           K   tau(  31) = (   0.4895605   0.8881796  -0.1541495  )
+        32           K   tau(  32) = (   0.2893740   0.8074652  -0.1548358  )
+        33           K   tau(  33) = (   0.5256629   0.6783255   0.8779086  )
+        34           K   tau(  34) = (   0.4339213   0.7906755   0.0928272  )
+        35           K   tau(  35) = (   0.6754183   0.8124514  -0.0777317  )
+        36           K   tau(  36) = (   0.2343439   0.0294575   0.2416181  )
+        37           K   tau(  37) = (   0.4284253   0.0620170   0.3688354  )
+        38           K   tau(  38) = (   0.2053051  -0.1297605   0.1324328  )
+        39           K   tau(  39) = (   0.3263632   0.9431799   0.2835489  )
+        40           K   tau(  40) = (   0.6419404   0.0550687   0.2775689  )
+        41           K   tau(  41) = (   0.5254386  -0.1596360   0.2962443  )
+        42           K   tau(  42) = (   0.7774184  -0.0886642   0.2469604  )
+        43           K   tau(  43) = (  -0.0254159   0.0940746   0.2110068  )
+        44           K   tau(  44) = (   0.0752189   0.2806975   0.2950792  )
+        45           K   tau(  45) = (   0.2628002   0.2022424   0.3842453  )
+        46           Na  tau(  46) = (   0.4470776   0.3089436   0.1232616  )
+        47           K   tau(  47) = (   0.6376866   0.2282653   0.1895126  )
+        48           K   tau(  48) = (   0.5638346   0.2321669   0.3440808  )
+        49           K   tau(  49) = (  -0.0144226   0.5183137   0.1647811  )
+        50           K   tau(  50) = (   0.1141552   0.7409488   0.3247659  )
+        51           Na  tau(  51) = (   0.3035422   0.5651980   0.0947332  )
+        52           K   tau(  52) = (   0.1605217   0.3366111   0.1766680  )
+        53           Na  tau(  53) = (   0.3547822   0.3992332   0.0502216  )
+        54           K   tau(  54) = (   0.4084979   0.3878917   0.3197369  )
+        55           K   tau(  55) = (   0.4973520   0.5208541   0.1342729  )
+        56           K   tau(  56) = (   0.6281086   0.4101273   0.3358736  )
+        57           Cl  tau(  57) = (   0.5089808   0.4981143   0.3964753  )
+        58           K   tau(  58) = (   0.7976055   0.5704434   0.4023956  )
+        59           K   tau(  59) = (   0.8139952   0.4141107   0.2003493  )
+        60           K   tau(  60) = (   0.1162939   0.7844555   0.0760730  )
+        61           Cl  tau(  61) = (   0.1828334   0.9294946   0.3616345  )
+        62           K   tau(  62) = (   0.4409544   0.6905121   0.2867959  )
+        63           Cl  tau(  63) = (   0.5449592   0.8727478   0.1888371  )
+        64           K   tau(  64) = (   0.0046924  -0.2168753   0.2070697  )
+        65           Cl  tau(  65) = (   0.7446898   0.7176630   0.3571841  )
+        66           K   tau(  66) = (   0.6501493   0.7676489   0.2542831  )
+        67           K   tau(  67) = (   0.9179728   0.7421714   0.3510553  )
+        68           K   tau(  68) = (   0.1036194  -0.0630109   0.3992552  )
+        69           K   tau(  69) = (   0.9435010   0.0265465   0.5542864  )
+        70           K   tau(  70) = (   0.1671559  -0.1207009   0.6109189  )
+        71           K   tau(  71) = (   0.4005155   0.0162555   0.6231506  )
+        72           K   tau(  72) = (   0.4972849  -0.1813144   0.6678235  )
+        73           K   tau(  73) = (   0.7101978  -0.0183760   0.5373401  )
+        74           K   tau(  74) = (   0.4798991   0.1473689   0.7641276  )
+        75           K   tau(  75) = (   0.8820046  -0.1472258   0.4575903  )
+        76           Na  tau(  76) = (   0.7612260   0.8954138   0.5610992  )
+        77           K   tau(  77) = (   0.9540312   0.0876731   0.3944059  )
+        78           K   tau(  78) = (   0.1025680   0.3010294   0.4629585  )
+        79           K   tau(  79) = (   0.1836165   0.1573052   0.6350161  )
+        80           K   tau(  80) = (   0.4049118   0.3109195   0.5437360  )
+        81           Na  tau(  81) = (   0.4836560   0.1531067   0.5715871  )
+        82           K   tau(  82) = (   0.8461265   0.2964094   0.4165204  )
+        83           K   tau(  83) = (   0.7418446   0.1239242   0.4041878  )
+        84           K   tau(  84) = (   0.7102597   0.1721860   0.6292298  )
+        85           Na  tau(  85) = (   0.1163502   0.6565891   0.5944617  )
+        86           K   tau(  86) = (   0.2036509   0.5456662   0.2702924  )
+        87           K   tau(  87) = (   0.0122625   0.4476832   0.6135275  )
+        88           K   tau(  88) = (   0.2271328   0.5139591   0.4912034  )
+        89           Cl  tau(  89) = (   0.3266894   0.6341597   0.3991200  )
+        90           K   tau(  90) = (   0.4633917   0.6037749   0.4988287  )
+        91           K   tau(  91) = (   0.5985633   0.2873221   0.5113601  )
+        92           K   tau(  92) = (   0.6773846   0.7323229   0.4993340  )
+        93           K   tau(  93) = (   0.6800101   0.5038751   0.5778973  )
+        94           K   tau(  94) = (   0.9449434   0.4784072   0.4349197  )
+        95           K   tau(  95) = (   0.0777948   0.8479464   0.4819241  )
+        96           K   tau(  96) = (   0.2966680   0.8318891   0.5222413  )
+        97           Cl  tau(  97) = (   0.5418238   0.7252183   0.3908012  )
+        98           K   tau(  98) = (   0.5003893   0.8608203   0.4789025  )
+        99           K   tau(  99) = (   0.6005240   0.8829117   0.8141642  )
+       100           K   tau( 100) = (   0.7035608  -0.1963395   0.4205397  )
+       101           K   tau( 101) = (   0.8865570   0.7124007   0.5352758  )
+       102           K   tau( 102) = (   0.7061243   0.7174432   0.7680207  )
+       103           K   tau( 103) = (   0.1066894  -0.0851727   0.8520818  )
+       104           K   tau( 104) = (   0.0416793  -0.1317578  -0.1149056  )
+       105           K   tau( 105) = (   0.0715336   0.1150763   0.8124289  )
+       106           K   tau( 106) = (   0.3422649  -0.0036711   0.8160403  )
+       107           K   tau( 107) = (   0.5447163  -0.1155000   0.9232126  )
+       108           K   tau( 108) = (   0.6720435  -0.0435980   0.7381655  )
+       109           K   tau( 109) = (   0.7247789   0.0179869  -0.0984303  )
+       110           K   tau( 110) = (   0.9322948  -0.0843428   0.7165643  )
+       111           K   tau( 111) = (  -0.0252987   0.2652369   0.7499803  )
+       112           K   tau( 112) = (   0.1641642   0.3311291   0.8646403  )
+       113           K   tau( 113) = (   0.3699713   0.1453017   0.9229928  )
+       114           K   tau( 114) = (   0.3383329   0.2880376   0.6947715  )
+       115           Na  tau( 115) = (   0.5302997   0.3011809   0.6730802  )
+       116           Na  tau( 116) = (   0.5900670   0.1133337   0.9400361  )
+       117           K   tau( 117) = (   0.8411798   0.0920187   0.7944279  )
+       118           K   tau( 118) = (   0.6925742   0.2394580   0.8367345  )
+       119           K   tau( 119) = (   0.1910023   0.4966426   0.7185137  )
+       120           K   tau( 120) = (   0.3592816   0.5553473   0.8223337  )
+       121           K   tau( 121) = (   0.5303183   0.4298811   0.8835371  )
+       122           K   tau( 122) = (   0.5011522   0.4764466   0.6861570  )
+       123           K   tau( 123) = (   0.7506958   0.3427072   0.6905967  )
+       124           Na  tau( 124) = (   0.8981013   0.6089808   0.6644149  )
+       125           Na  tau( 125) = (   0.6634289   0.5427799   0.7722182  )
+       126           K   tau( 126) = (   0.0336400   0.7307905   0.7732717  )
+       127           K   tau( 127) = (  -0.0266043   0.5236515   0.8377599  )
+       128           K   tau( 128) = (   0.0478529   0.8115218  -0.1439039  )
+       129           Cl  tau( 129) = (   0.0445819  -0.1997262   0.7768494  )
+       130           K   tau( 130) = (   0.1443890   0.8821117   0.6734971  )
+       131           Cl  tau( 131) = (   0.1483160   0.8466956   0.8533946  )
+       132           K   tau( 132) = (   0.2811223   0.6725506   0.7543974  )
+       133           K   tau( 133) = (   0.3113866   0.9317595   0.7925123  )
+       134           K   tau( 134) = (   0.5321353   0.8049524   0.6758015  )
+       135           Cl  tau( 135) = (   0.7472421   0.8314553   0.8672151  )
+       136           K   tau( 136) = (   0.8588597   0.6938870  -0.1497341  )
+       137           K   tau( 137) = (   0.8615077   0.8855823   0.7522339  )
+
+     number of k points=     1  Gaussian smearing, width (Ry)=  0.0200
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+     Dense  grid:  4894851 G-vectors     FFT dimensions: ( 192, 225, 225)
+
+     Smooth grid:  3617097 G-vectors     FFT dimensions: ( 180, 216, 200)
+
+     Estimated max dynamical RAM per process >       4.34 GB
+
+     Estimated total dynamical RAM >      60.81 GB
+
+     Initial potential from superposition of free atoms
+
+     starting charge 1206.80892, renormalised to 1209.00000
+     Starting wfcs are 1009 randomized atomic wfcs
+
+     total cpu time spent up to now is     6291.1 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  5.0
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+     ethr =  3.16E-04,  avg # of iterations = 10.0
+
+     negative rho (up, down):  2.319E-03 0.000E+00
+
+     total cpu time spent up to now is    35186.3 secs
+
+     total energy              =   -8247.67907568 Ry
+     estimated scf accuracy    <      13.33120145 Ry
+
+     iteration #  2     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.10E-03,  avg # of iterations =  7.0
+
+     negative rho (up, down):  2.071E-03 0.000E+00
+
+     total cpu time spent up to now is    51707.1 secs
+
+     total energy              =   -8233.91025713 Ry
+     estimated scf accuracy    <     303.61996787 Ry
+
+     iteration #  3     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.10E-03,  avg # of iterations = 12.0
+
+     negative rho (up, down):  2.128E-03 0.000E+00
+
+     total cpu time spent up to now is    73488.4 secs
+
+     total energy              =   -8250.28582818 Ry
+     estimated scf accuracy    <     141.46026361 Ry
+
+     iteration #  4     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.10E-03,  avg # of iterations =  7.0
+
+     negative rho (up, down):  2.211E-03 0.000E+00
+
+     total cpu time spent up to now is    89585.4 secs
+
+     total energy              =   -8255.97047290 Ry
+     estimated scf accuracy    <      28.31224127 Ry
+
+     iteration #  5     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.10E-03,  avg # of iterations =  6.0
+
+     negative rho (up, down):  2.337E-03 0.000E+00
+
+     total cpu time spent up to now is   102168.0 secs
+
+     total energy              =   -8257.24188284 Ry
+     estimated scf accuracy    <      14.78244319 Ry
+
+     iteration #  6     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.10E-03,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.566E-03 0.000E+00
+
+     total cpu time spent up to now is   113892.9 secs
+
+     total energy              =   -8257.60140358 Ry
+     estimated scf accuracy    <       4.61774960 Ry
+
+     iteration #  7     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-04,  avg # of iterations =  2.0
+
+     negative rho (up, down):  2.773E-03 0.000E+00
+
+     total cpu time spent up to now is   126006.7 secs
+
+     total energy              =   -8257.75714564 Ry
+     estimated scf accuracy    <       2.52263383 Ry
+
+     iteration #  8     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.09E-04,  avg # of iterations =  6.0
+
+     negative rho (up, down):  3.005E-03 0.000E+00
+
+     total cpu time spent up to now is   138101.8 secs
+
+     total energy              =   -8257.76410109 Ry
+     estimated scf accuracy    <       2.62497882 Ry
+
+     iteration #  9     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.09E-04,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.228E-03 0.000E+00
+
+     total cpu time spent up to now is   150054.2 secs
+
+     total energy              =   -8257.80959464 Ry
+     estimated scf accuracy    <       2.09241227 Ry
+
+     iteration # 10     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.73E-04,  avg # of iterations =  2.0
+
+     negative rho (up, down):  3.661E-03 0.000E+00
+
+     total cpu time spent up to now is   162333.7 secs
+
+     total energy              =   -8257.86812767 Ry
+     estimated scf accuracy    <       0.79736777 Ry
+
+     iteration # 11     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  6.60E-05,  avg # of iterations = 15.0
+
+     negative rho (up, down):  3.944E-03 0.000E+00
+
+     total cpu time spent up to now is   176164.2 secs
+
+     total energy              =   -8257.89227380 Ry
+     estimated scf accuracy    <       0.29194029 Ry
+
+     iteration # 12     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.41E-05,  avg # of iterations = 14.0
+
+     negative rho (up, down):  3.966E-03 0.000E+00
+
+     total cpu time spent up to now is   191105.2 secs
+
+     total energy              =   -8257.84340458 Ry
+     estimated scf accuracy    <       1.31896022 Ry
+
+     iteration # 13     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.41E-05,  avg # of iterations = 13.0
+
+     negative rho (up, down):  3.990E-03 0.000E+00
+
+     total cpu time spent up to now is   205365.3 secs
+
+     total energy              =   -8257.89814980 Ry
+     estimated scf accuracy    <       0.46643436 Ry
+
+     iteration # 14     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.41E-05,  avg # of iterations =  7.0
+
+     negative rho (up, down):  4.007E-03 0.000E+00
+
+     total cpu time spent up to now is   218659.5 secs
+
+     total energy              =   -8257.90409256 Ry
+     estimated scf accuracy    <       0.53404160 Ry
+
+     iteration # 15     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.41E-05,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.047E-03 0.000E+00
+
+     total cpu time spent up to now is   231132.1 secs
+
+     total energy              =   -8257.92073204 Ry
+     estimated scf accuracy    <       0.22868473 Ry
+
+     iteration # 16     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.89E-05,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.089E-03 0.000E+00
+
+     total cpu time spent up to now is   243498.2 secs
+
+     total energy              =   -8257.93034450 Ry
+     estimated scf accuracy    <       0.05978430 Ry
+
+     iteration # 17     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  4.94E-06,  avg # of iterations = 20.0
+
+     negative rho (up, down):  4.109E-03 0.000E+00
+
+     total cpu time spent up to now is   256812.0 secs
+
+     total energy              =   -8257.93122261 Ry
+     estimated scf accuracy    <       0.04867458 Ry
+
+     iteration # 18     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  4.03E-06,  avg # of iterations =  7.0
+
+     negative rho (up, down):  4.114E-03 0.000E+00
+
+     total cpu time spent up to now is   269254.9 secs
+
+     total energy              =   -8257.93218494 Ry
+     estimated scf accuracy    <       0.04435750 Ry
+
+     iteration # 19     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.67E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.114E-03 0.000E+00
+
+     total cpu time spent up to now is   281268.6 secs
+
+     total energy              =   -8257.93365565 Ry
+     estimated scf accuracy    <       0.02764464 Ry
+
+     iteration # 20     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.29E-06,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.115E-03 0.000E+00
+
+     total cpu time spent up to now is   293082.2 secs
+
+     total energy              =   -8257.93465035 Ry
+     estimated scf accuracy    <       0.01236792 Ry
+
+     iteration # 21     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.02E-06,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.119E-03 0.000E+00
+
+     total cpu time spent up to now is   305461.5 secs
+
+     total energy              =   -8257.93520799 Ry
+     estimated scf accuracy    <       0.00208621 Ry
+
+     iteration # 22     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.73E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.121E-03 0.000E+00
+
+     total cpu time spent up to now is   318360.8 secs
+
+     total energy              =   -8257.93520079 Ry
+     estimated scf accuracy    <       0.00193193 Ry
+
+     iteration # 23     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.60E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.125E-03 0.000E+00
+
+     total cpu time spent up to now is   330945.9 secs
+
+     total energy              =   -8257.93513462 Ry
+     estimated scf accuracy    <       0.00450824 Ry
+
+     iteration # 24     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.60E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.127E-03 0.000E+00
+
+     total cpu time spent up to now is   343544.5 secs
+
+     total energy              =   -8257.93511683 Ry
+     estimated scf accuracy    <       0.00588364 Ry
+
+     iteration # 25     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.60E-07,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.129E-03 0.000E+00
+
+     total cpu time spent up to now is   355827.8 secs
+
+     total energy              =   -8257.93532367 Ry
+     estimated scf accuracy    <       0.00152142 Ry
+
+     iteration # 26     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.26E-07,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.130E-03 0.000E+00
+
+     total cpu time spent up to now is   367482.6 secs
+
+     total energy              =   -8257.93533854 Ry
+     estimated scf accuracy    <       0.00122303 Ry
+
+     iteration # 27     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.01E-07,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   379301.9 secs
+
+     total energy              =   -8257.93538733 Ry
+     estimated scf accuracy    <       0.00043575 Ry
+
+     iteration # 28     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.60E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   391132.0 secs
+
+     total energy              =   -8257.93539516 Ry
+     estimated scf accuracy    <       0.00029228 Ry
+
+     iteration # 29     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.42E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   403042.7 secs
+
+     total energy              =   -8257.93539012 Ry
+     estimated scf accuracy    <       0.00044394 Ry
+
+     iteration # 30     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.42E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   414921.7 secs
+
+     total energy              =   -8257.93538141 Ry
+     estimated scf accuracy    <       0.00063918 Ry
+
+     iteration # 31     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.42E-08,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   426784.0 secs
+
+     total energy              =   -8257.93540141 Ry
+     estimated scf accuracy    <       0.00029017 Ry
+
+     iteration # 32     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  2.40E-08,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   438593.8 secs
+
+     total energy              =   -8257.93541548 Ry
+     estimated scf accuracy    <       0.00004616 Ry
+
+     iteration # 33     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   450645.6 secs
+
+     total energy              =   -8257.93541240 Ry
+     estimated scf accuracy    <       0.00014297 Ry
+
+     iteration # 34     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   462607.7 secs
+
+     total energy              =   -8257.93541025 Ry
+     estimated scf accuracy    <       0.00016321 Ry
+
+     iteration # 35     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   474690.3 secs
+
+     total energy              =   -8257.93540528 Ry
+     estimated scf accuracy    <       0.00032215 Ry
+
+     iteration # 36     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   486732.4 secs
+
+     total energy              =   -8257.93541126 Ry
+     estimated scf accuracy    <       0.00013902 Ry
+
+     iteration # 37     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   498769.4 secs
+
+     total energy              =   -8257.93541234 Ry
+     estimated scf accuracy    <       0.00013580 Ry
+
+     iteration # 38     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   510813.2 secs
+
+     total energy              =   -8257.93541599 Ry
+     estimated scf accuracy    <       0.00005842 Ry
+
+     iteration # 39     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   522744.6 secs
+
+     total energy              =   -8257.93541632 Ry
+     estimated scf accuracy    <       0.00007454 Ry
+
+     iteration # 40     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.82E-09,  avg # of iterations =  1.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   534553.2 secs
+
+     total energy              =   -8257.93541783 Ry
+     estimated scf accuracy    <       0.00004422 Ry
+
+     iteration # 41     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  3.66E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   546381.0 secs
+
+     total energy              =   -8257.93541789 Ry
+     estimated scf accuracy    <       0.00003752 Ry
+
+     iteration # 42     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ethr =  1.12E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   433705.6 secs
+
+     total energy              =   -8257.93541157 Ry
+     estimated scf accuracy    <       0.00011796 Ry
+
+     iteration #119     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   437473.5 secs
+
+     total energy              =   -8257.93540473 Ry
+     estimated scf accuracy    <       0.00029240 Ry
+
+     iteration #120     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   441201.9 secs
+
+     total energy              =   -8257.93541026 Ry
+     estimated scf accuracy    <       0.00019301 Ry
+
+     iteration #121     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   444862.5 secs
+
+     total energy              =   -8257.93541610 Ry
+     estimated scf accuracy    <       0.00007236 Ry
+
+     iteration #122     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   448489.8 secs
+
+     total energy              =   -8257.93541667 Ry
+     estimated scf accuracy    <       0.00005086 Ry
+
+     iteration #123     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   452122.4 secs
+
+     total energy              =   -8257.93541368 Ry
+     estimated scf accuracy    <       0.00011924 Ry
+
+     iteration #124     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   455848.9 secs
+
+     total energy              =   -8257.93540759 Ry
+     estimated scf accuracy    <       0.00025001 Ry
+
+     iteration #125     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   459651.6 secs
+
+     total energy              =   -8257.93540371 Ry
+     estimated scf accuracy    <       0.00036491 Ry
+
+     iteration #126     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   463461.2 secs
+
+     total energy              =   -8257.93540222 Ry
+     estimated scf accuracy    <       0.00032946 Ry
+
+     iteration #127     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   467197.1 secs
+
+     total energy              =   -8257.93540805 Ry
+     estimated scf accuracy    <       0.00023187 Ry
+
+     iteration #128     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   470908.9 secs
+
+     total energy              =   -8257.93541358 Ry
+     estimated scf accuracy    <       0.00010602 Ry
+
+     iteration #129     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   474523.4 secs
+
+     total energy              =   -8257.93541499 Ry
+     estimated scf accuracy    <       0.00009595 Ry
+
+     iteration #130     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   478128.7 secs
+
+     total energy              =   -8257.93541274 Ry
+     estimated scf accuracy    <       0.00012216 Ry
+
+     iteration #131     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   481823.5 secs
+
+     total energy              =   -8257.93540703 Ry
+     estimated scf accuracy    <       0.00021520 Ry
+
+     iteration #132     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   485682.3 secs
+
+     total energy              =   -8257.93540407 Ry
+     estimated scf accuracy    <       0.00022812 Ry
+
+     iteration #133     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   489483.8 secs
+
+     total energy              =   -8257.93539917 Ry
+     estimated scf accuracy    <       0.00040037 Ry
+
+     iteration #134     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   493230.4 secs
+
+     total energy              =   -8257.93540523 Ry
+     estimated scf accuracy    <       0.00028957 Ry
+
+     iteration #135     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   496904.9 secs
+
+     total energy              =   -8257.93540550 Ry
+     estimated scf accuracy    <       0.00035194 Ry
+
+     iteration #136     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   500548.0 secs
+
+     total energy              =   -8257.93541332 Ry
+     estimated scf accuracy    <       0.00011837 Ry
+
+     iteration #137     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  3.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   504173.2 secs
+
+     total energy              =   -8257.93541036 Ry
+     estimated scf accuracy    <       0.00017959 Ry
+
+     iteration #138     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   507891.8 secs
+
+     total energy              =   -8257.93540678 Ry
+     estimated scf accuracy    <       0.00017056 Ry
+
+     iteration #139     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   511760.8 secs
+
+     total energy              =   -8257.93538814 Ry
+     estimated scf accuracy    <       0.00058796 Ry
+
+     iteration #140     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   515703.7 secs
+
+     total energy              =   -8257.93539175 Ry
+     estimated scf accuracy    <       0.00052760 Ry
+
+     iteration #141     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  6.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   519544.2 secs
+
+     total energy              =   -8257.93540655 Ry
+     estimated scf accuracy    <       0.00023532 Ry
+
+     iteration #142     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   523305.8 secs
+
+     total energy              =   -8257.93541174 Ry
+     estimated scf accuracy    <       0.00012157 Ry
+
+     iteration #143     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   526973.6 secs
+
+     total energy              =   -8257.93540915 Ry
+     estimated scf accuracy    <       0.00019804 Ry
+
+     iteration #144     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  4.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   530681.4 secs
+
+     total energy              =   -8257.93540144 Ry
+     estimated scf accuracy    <       0.00036636 Ry
+
+     iteration #145     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   534437.7 secs
+
+     total energy              =   -8257.93539366 Ry
+     estimated scf accuracy    <       0.00056716 Ry
+
+     iteration #146     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  6.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   538449.3 secs
+
+     total energy              =   -8257.93538195 Ry
+     estimated scf accuracy    <       0.00068330 Ry
+
+     iteration #147     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  6.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   542562.8 secs
+
+     total energy              =   -8257.93538340 Ry
+     estimated scf accuracy    <       0.00068650 Ry
+
+     iteration #148     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  6.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   546598.3 secs
+
+     total energy              =   -8257.93539735 Ry
+     estimated scf accuracy    <       0.00035969 Ry
+
+     iteration #149     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+     ethr =  1.12E-09,  avg # of iterations =  5.0
+
+     negative rho (up, down):  4.131E-03 0.000E+00
+
+     total cpu time spent up to now is   550403.5 secs
+
+     total energy              =   -8257.93540620 Ry
+     estimated scf accuracy    <       0.00025898 Ry
+
+     iteration #150     ecut=    66.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
